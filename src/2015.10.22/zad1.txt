@@ -1,0 +1,13 @@
+Błędne/poprawne
+
+Podaj polecenie (potok), który zapisze do pliku edits.txt pary składające się z błędnego wyrazu i jego poprawnej wersji oddzielone znakiem tabulacji mając jako plik wejściowy korpus errors.m2. Należy wziąć pod uwagę poprawki będące wstawieniami lub usunięciami wyrazów, tzn. zarówno wyraz błędny, jak i wyraz poprawny mogą być puste (to jest uproszczenie).
+
+Plik errors.m2 do pobrania tutaj: https://eduwiki.wmi.amu.edu.pl/filipg/PJN-2015?action=AttachFile&do=get&target=errors.m2
+
+(Grupa C ma to też w repozytorium: textutils/errors.m2)
+
+Format pliku jest następujący: linie rozpoczynające się od S to zdania, poniżej których znajduje się zero lub więcej adnotacji błędów, każda w postaci:
+
+"A [spacja] pozycja [tabulacja] wyraz błędny => wyraz poprawny [tabulacja] typ błędu"
+
+cat errors.m2 | egrep ^A | grep -Po "[\p{L} \p{P}]* => [\p{L} \p{P}]*" | tr -s " => " "\t" > edits.txt

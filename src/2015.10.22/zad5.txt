@@ -1,0 +1,5 @@
+Lista frekwencyjna
+
+Podaj polecenie tworzące listę frekwencyjną słów w języku polskim na przykładzie pliku pantadeusz.txt (zob. poprzednie zajęcia) posortowaną wg. liczby wystąpień. Należy uwzględnić różną wielkość liter oraz fakt, że słowa mogą być oddzielone nie tylko samymi spacjami, lecz również znakami interpunkcyjnymi.
+
+ cat pantadeusz.txt | grep -Po "[\p{L}]+" | sort | uniq -c | sort -nr

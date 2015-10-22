@@ -1,0 +1,9 @@
+Procent
+
+Chcemy dowiedzieć się ile procentowo jest błędów w przykładowym korpusie errors.m2. W tym celu konieczne jest określenie (1) liczby błędnych wyrazów (możemy dla uproszczenia przyjąć, że adnotacje dotyczą zawsze pojedynczych wyrazów) oraz (2) liczby wszystkich słów (uwaga! litera S na początku każdego zdania nie jest słowem). Podaj dwa polecenia pozwalające uzyskać te liczby. 
+
+cat errors.m2 | egrep ^S | sed 's/S //' | grep -Po "[\p{L}\p{P}\p{N}]+" | grep -c ""
+cat errors.m2 | egrep -c ^A
+
+cat errors.m2 | egrep ^S | grep -Po "[\p{L}\p{P}\p{N}]+" | grep -v ^S$ | grep -c ""
+cat errors.m2 | egrep -c ^A

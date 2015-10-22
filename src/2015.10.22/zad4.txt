@@ -1,0 +1,7 @@
+Piętnaście
+
+Podaj dwa polecenia: (1) pierwsze, które znajdzie wszystkie lata wzmiankowane w korpusie errors.m2 i zapisze je do pliku years.txt; (2) drugie, znajdujące piętnaście najczęściej wzmiankowanych lat.
+
+cat errors.m2 | egrep ^S | grep -Po "[\p{N}]+" | awk '$NF >= 1900 && $NF <= 2050' | sort -n | uniq > years.txt
+cat errors.m2 | egrep ^S | grep -Po "[\p{N}]+" | awk '$NF >= 1900 && $NF <= 2050' | sort -n | uniq -c | sort -nr | head -n 15
+

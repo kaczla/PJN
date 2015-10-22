@@ -1,0 +1,9 @@
+Typy
+
+Chcemy określić typy błędów i ich liczność w pliku errors.m2. Podaj dwa polecenia: (1) pierwsze, które do pliku categories.txt zapisze wszystkie typy błędów występujące w korpusie bez powtórzeń, (2) drugie, które zliczy liczbę wystąpień poszczególnych typów błędów i zapisze je do pliku categories.freq.txt.
+
+(1):
+cat errors.m2 | egrep "^A" | egrep -o ":\w+$" | sed 's/://' | sort | uniq  > categories.txt
+(2):
+cat errors.m2 | egrep "^A" | egrep -o ":\w+$" | sed 's/://' | sort | uniq -c > categories.freg.txt
+
