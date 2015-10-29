@@ -1,0 +1,4 @@
+Pary
+
+Podaj polecenie lub polecenia, które wyszukają z pliku errors.m2 jak największą listę par składających się z frazy polskiej (fraza to ciąg składający się z jednego lub więcej słów) i odpowiadającemu jej tłumaczeniu w języku angielskim. Lista wynikowa powinna zostać zapisana do pliku plen.txt, a pary elementów oddzielone znakiem tabulacji. Wskazówka: angielskie zwroty często są poprzedzone skrótem ang.. 
+
