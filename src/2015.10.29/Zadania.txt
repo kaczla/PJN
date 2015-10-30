@@ -1,0 +1,49 @@
+BONUS:
+Przecinki (Zadanie ekstra, nie obowiązują zasady jak w wypadku "większych" zadań)
+
+Napisz program do przewidywania, ile powinno być przecinków w zdaniu o danej liczbie słów. Wykorzystaj bibliotekę scikit-learn oraz dane z poprzednich ćwiczeń do trenowania.
+Wylosuj ileś zdań z korpusu treningowego. Oblicz dla nich wartości predykcji i porównaj ze stanem faktycznym.
+Do programu dodaj następnie  jeszcze jedną, wymyśloną przez Ciebie cechę. Wytrenuj nowy program przewidujący liczbę przecinków. Sprawdź na tych samych zdaniach, co poprzednio, czy wyniki się poprawiły. Jeśli nawet wyniki się nie poprawiły, zamieść je pomimo tego.
+
+
+
+Zad1:
+Spam
+
+Na podstawie swojej skrzynki mailowej (a w szczególności na podstawie wiadomości zaklasyfikowanych da SPAM / nie SPAM) opracuj swój klasyfikator maili (SPAM / nie SPAM). Skorzystaj z regresji logistycznej lub klasyfikatora Bayesa.
+Jako jedyną cechę należy przyjąć wagę wyrazów wchodzących w skład maila, obliczoną jako iloraz frekwencji wyrazu i odwrotnej frekwencji dokumentu.
+
+
+
+Zad2:
+Dobra recenzja, czy zła
+
+Opracuj system, który ocenia recenzję słowną hotelu w skali między 1 a 5 (lub innej liczbowej).
+Jako materiał uczący zbierz recenzje hoteli z wybranego serwisu, w którym recenzje słowne oznaczone są oceną punktową.
+Zastosuj regresję liniową.
+Jako jedyną cechę należy przyjąć wagę wyrazów wchodzących w skład recenzji, obliczoną jako iloraz frekwencji wyrazu i odwrotnej frekwencji dokumentu.
+
+
+
+Zad3:
+Czego dotyczą moje mejle
+
+Opracuj system, który podzieli dzieli Twoje maile na grupy tematyczne.
+Zastosuj metodę k-najbliższych sąsiadów.
+Jako jedyną cechę należy przyjąć wagę wyrazów wchodzących w skład maila, obliczoną jako iloraz frekwencji wyrazu i odwrotnej frekwencji dokumentu.
+
+
+
+Zad4:
+Kobieta czy mężczyzna?
+
+Stworzyć system, który zgaduje, czy tekst został napisany przez mężczyznę czy przez kobietę.
+System powinien zostać wyuczony na podstawie dużego korpusu tekstów dostarczonego przez prowadzącego zajęcia.
+
+
+
+Zad5:
+Roku ów
+
+Stworzyć system, który odgaduje rok powstania tekstu (z zakresu 1814-2013).
+System powinien zostać wyuczony na podstawie dużego korpusu dostarczonego przez prowadzacego zajęcia.
