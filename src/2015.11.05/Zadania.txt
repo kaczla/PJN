@@ -1,0 +1,11 @@
+Zad1:
+Co to za słowo
+
+Napisz swój własny lematyzator, oparty na wybranym słowniku (np. SJP). Lematyzer powinien mieć funkcję zgadywania podstawowych form nieznanych słów na zasadzie analogii.
+
+
+
+Zad2:
+Jak ja się nazywam?
+
+Znajdź listę polskich nazwisk. Zaimplementuj aplikację, która prawidłowo odmienia przez przypadki nazwiska na zasadzie analogii. Wymaga to wcześniejszego ręcznego odmienienia podzbioru nazwisk.
