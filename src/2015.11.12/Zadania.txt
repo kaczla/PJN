@@ -1,0 +1,39 @@
+Zad1:
+Podręcznik
+
+Napisz podręcznik po polsku lub angielsku, który opisuje wybrany toolkit do przetwarzania języka naturalnego.
+Wymagania odnośnie treści:
+    Lista umiejętności potrzebnych do uruchomienia narzędzia
+    Proces instalacji
+    Przykładowe zadania z rozwiązaniami
+Zadanie może być wykonane niezależnie przez 5 studentów (5 różnych toolkitów)
+
+
+
+Zad2:
+Super-bot
+
+Create your bot on a server such as pandora.bot or chat4u.bot
+Mimimum requirements:
+1) The bot should not be a replica of a system created for another course (e.g. KCK)
+2) The bot should address a specific topic
+3) Invention required!
+
+
+Zad3:
+Winda
+
+Skompilować i uruchomić parser Phoenix:
+http://wiki.speech.cs.cmu.edu/olympus/index.php/Phoenix
+Stworzyć gramatykę Phoenixową dla poleceń wydawanych windzie ("zamknij drzwi", "zjedź na parter", "wjedź na 3. piętro"). Opracuj listę rozpoznawanych akcji.
+
+
+Zad4:
+WMI bot
+
+Create a bot on a WMI server
+Mimimum requirements:
+1) The bot should not be a replica of a system created for another course (e.g. KCK)
+2) The bot should address a specific topic
+Suggested topic: Information on WMI
+3) Invention required!
