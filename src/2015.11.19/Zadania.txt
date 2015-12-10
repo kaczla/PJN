@@ -1,0 +1,32 @@
+Zad1:
+Tokenizer
+
+Create your own tokenizer for Polish texts:
+For each token the tokenizer should return its type.
+Tokenization rules should be editable independent of application.
+Other languages - why not?
+
+
+
+Zad2:
+Lista skrótów
+
+Implement an algorithm to extract an exhaustive list of abbreviations form a text corpus.
+
+
+
+Zad3:
+My precious (segmenter)
+
+Implement your own SRX tool (preferably based finite-state automata). The tool should allow user to create his own SRX rules and test them against selected text documents.
+
+
+
+Zad4:
+Bilingual aligner - team task
+
+Implement a tool for aligning bilingual texts.
+Input: Two text documents with equivalent texts in different languages.
+Each document is segmented into sentences.
+Sentences are matched automatically in a naive way: n-th sentence in the first document corresponds to n-th sentence in the second document.
+User can correct automatic matching.
