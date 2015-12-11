@@ -40,7 +40,6 @@ Z2 = np.polyfit(X2, Y2, 1)
 P2 = np.poly1d(Z2)
 XP = np.linspace(0, max(X2)+1)
 plt.plot(X2,Y2,'.',X,Y,'o',XP,P(XP),'c--',XP,P2(XP),'r-')
-# plt.show()
 
 FILE = open(sys.argv[1], "r")
 CHECK_T = 0
@@ -55,7 +54,10 @@ for line in FILE:
         CHECK_T += 1
     else:
         CHECK_F += 1
-        print "regression =",ans,"\tlen =",x,"\tcount =",y
-print "All check:", CHECK_T+CHECK_F
-print "TRUE:", CHECK_T
-print "FALSE:", CHECK_F
+        # print "regression =",ans,"\tlen =",x,"\tcount =",y
+print "All check:\t", CHECK_T+CHECK_F
+print "TRUE:\t\t", CHECK_T
+print "FALSE:\t\t", CHECK_F
+print "ACCURACY:\t", round(float(CHECK_T)/float(CHECK_T+CHECK_F)*100, 2), "%"
+
+plt.show()
