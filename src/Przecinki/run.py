@@ -4,6 +4,7 @@
 """Przewidywanie ilości wystąpień przecinków z zdaniu."""
 
 import sys
+import math
 from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,8 +37,10 @@ for key, value in SENTENCES.iteritems():
 
 Z = np.polyfit(X, Y, 1)
 P = np.poly1d(Z)
+print "średnia wartość z danych: ", P
 Z2 = np.polyfit(X2, Y2, 1)
 P2 = np.poly1d(Z2)
+print "wszystkie wartości z danych:", P2
 XP = np.linspace(0, max(X2)+1)
 plt.plot(X2,Y2,'.',X,Y,'o',XP,P(XP),'c--',XP,P2(XP),'r-')
 
@@ -51,6 +54,7 @@ for line in FILE:
     ans = P2(x)
     # print ans,";",x,"=",y
     if ans >= y-1 and ans <= y+1:
+    # if ans >= y-math.sqrt(y) and ans <= y+math.sqrt(y):
         CHECK_T += 1
     else:
         CHECK_F += 1
