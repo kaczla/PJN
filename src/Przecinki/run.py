@@ -19,16 +19,12 @@ for line in sys.stdin:
     words = line.split()
     i = line.count(",")
     SENTENCES[len(words)].append(i);
-    # if i > 0:
-    #     SENTENCES[len(words)].append(i);
-
 X = []
 Y = []
 X2 = []
 Y2 = []
 for key, value in SENTENCES.iteritems():
     if len(value) > 10:
-        # print key, len(value), "=", float(sum(value))/float(len(value))
         X.append(key)
         Y.append(float(sum(value))/float(len(value)))
     for i in value:
@@ -52,13 +48,11 @@ for line in FILE:
     x = len(line.split())
     y = float(line.count(","))
     ans = P2(x)
-    # print ans,";",x,"=",y
     if ans >= y-1 and ans <= y+1:
     # if ans >= y-math.sqrt(y) and ans <= y+math.sqrt(y):
         CHECK_T += 1
     else:
         CHECK_F += 1
-        # print "regression =",ans,"\tlen =",x,"\tcount =",y
 print "All check:\t", CHECK_T+CHECK_F
 print "TRUE:\t\t", CHECK_T
 print "FALSE:\t\t", CHECK_F
