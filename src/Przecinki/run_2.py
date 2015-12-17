@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 # -*- coding: utf-8 -*-
 
-"""Przewidywanie ilości samogłosego z zdaniu."""
+"""Przewidywanie ilości samogłosek z zdaniu."""
 
 import sys
 import math
