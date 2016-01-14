@@ -3,7 +3,7 @@
 
 import sys
 
-FILE_SAVE_OUT = open("OpenFST_raw.txt", "w")
+FILE_SAVE_OUT = open("data/OpenFST_raw.txt", "w")
 
 COUNTER = 2
 for line in sys.stdin:

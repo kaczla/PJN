@@ -61,8 +61,8 @@ OUTPUT = u""
 LINES = dict()
 BAD = 0
 
-FILE_SAVE_IN = open("data_raw_in", "w")
-FILE_SAVE_OUT = open("data_raw_out", "w")
+FILE_SAVE_IN = open("data/data_raw_in", "w")
+FILE_SAVE_OUT = open("data/data_raw_out", "w")
 
 
 for line in sys.stdin:
