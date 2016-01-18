@@ -1,7 +1,14 @@
 #!/bin/sh
 
 if [ $1 ]; then
-    if [ -f data/$1 ]; then
+    if [ "$1" = "run" ]; then
+	echo "Uruchamianie lematyzatora:"
+	if [ -f "lematyzator.app" ]; then
+	    ./lematyzator.app
+	else
+	    echo "Zbuduj lematyzator!"
+	fi
+    elif [ -f data/$1 ]; then
 	echo "Przetwarzanie PoliMorf (plik: $1)"
 	./convert_data.py < data/$1
 	echo "Pobieranie mapy znaków"
@@ -17,9 +24,9 @@ if [ $1 ]; then
 	echo "Przetwarzanie do postaci tekstowej OpenFST"
 	fstprint --isymbols=data/symbols.txt --osymbols=data/symbols.txt data/OpenFST_min_binary.fst data/OpenFST_out_text.fst
 	echo "Przetwarzanie do postaci binarnej dla Lematyzatora"
-	g++ -std=c++11 load_into_memory.cpp -o load_into_memory
-	./load_into_memor
-	g++ -std=c++11 lematyzator.cpp -o lematyzator
+	g++ -std=c++11 load_into_memory.cpp -o load_into_memory.app
+	./load_into_memor.app
+	g++ -std=c++11 lematyzator.cpp -o lematyzator.app
 	echo "Lematyzator zbudowany"
 	rm data/data*
 	rm data/OpenFST*
@@ -28,9 +35,12 @@ if [ $1 ]; then
 	echo "Pobierz PoliMorf i wypakuj!\nPlik powinien znajdzować się w folderze data pod nazwa PoliMorfX.tab - gdzie X oznacza wersje pliku!"
     fi
 else
-    echo "Nie podano nazwę pliku jako argument!\nPrzykładowe uruchomienie:\n\t./run.sh PoliMorf-0.6.7.tab"
+    echo "Nie podano argument!"
+    echo "Przykładowe uruchomienie:"
+    echo "\t./run.sh PoliMorf-0.6.7.tab\t - zbudowanie lematyzatora"
+    echo "\t./run.sh run\t\t\t - uruchomienie lematyzatora"
 fi
 
-ALL () {
-    fstcompile --isymbols=symbols.txt --osymbols=symbols.txt text.fst | fstdeterminize | fstminimize | fstprint --isymbols=symbols.txt --osymbols=symbols.txt
+FST_PIPE () {
+    fstcompile --isymbols=data/symbols.txt --osymbols=data/symbols.txt data/OpenFST_raw.txt | fstdeterminize | fstminimize | fstprint --isymbols=symbols.txt --osymbols=symbols.txt > data/OpenFST_out_text.fst
 }
