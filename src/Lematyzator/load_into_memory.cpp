@@ -18,8 +18,8 @@ int main(int argc, char* argv[]){
   int counter_map = 0;
   wstringstream to_file;
   wfstream file_save, file_save_2;
-  file_save.open("data/data.bin", ios::out | ios::binary);
-  file_save_2.open("data/map.bin", ios::out | ios::binary);
+  file_save.open("data/data", ios::out);
+  file_save_2.open("data/map", ios::out);
   {
     wifstream file_map_char;
     file_map_char.open("data/symbols.txt",ios::in);
@@ -43,6 +43,7 @@ int main(int argc, char* argv[]){
       cout<<"Problem z mapą znaków!\n";
       return 0;
     }
+    to_file<<"FINAL\n";
     file_map_char.close();
     wifstream file_input;
     file_input.open("data/OpenFST_out_text.fst", ios::in);
@@ -56,6 +57,7 @@ int main(int argc, char* argv[]){
         found = input_string.find(L"\t", begin_find);
         if(found == string::npos){
           FinalState.push_back(stoi(input_string));
+          to_file<<input_string<<"\n";
         }
         else{
           begin_state = stoi(input_string.substr(begin_find,found-begin_find));
@@ -104,7 +106,7 @@ int main(int argc, char* argv[]){
   }
   file_save.close();
   file_save_2<<"SIZE\n";
-  file_save_2<<States.size()<<" "<<counter_map<<" "<<FinalState.size()<<"\n";
+  file_save_2<<States.size()<<" "<<KeyMap.size()<<" "<<FinalState.size()<<"\n";
   file_save_2<<to_file.rdbuf();
   file_save_2.close();
   States.clear();
