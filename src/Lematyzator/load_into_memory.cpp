@@ -18,8 +18,8 @@ int main(int argc, char* argv[]){
   int counter_map = 0;
   wstringstream to_file;
   wfstream file_save, file_save_2;
-  file_save.open("data/data", ios::out);
-  file_save_2.open("data/map", ios::out);
+  file_save.open("data/lematyzator_data", ios::out);
+  file_save_2.open("data/lematyzator_map", ios::out);
   {
     wifstream file_map_char;
     file_map_char.open("data/symbols.txt",ios::in);

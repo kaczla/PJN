@@ -37,12 +37,12 @@ int main(int argc, char* argv[]){
   {
     wstring tmp_string;
     wifstream file;
-    file.open("data/map", ios::in);
+    file.open("data/lematyzator_map", ios::in);
     if(file.good()){
       //SIZE
       file>>tmp_string;
       if(tmp_string != L"SIZE"){
-        wcout<<L"ERROR (SIZE): Problem z plikiem data/map.bin!\n";
+        wcout<<L"ERROR (SIZE): Problem z plikiem data/lematyzator_map!\n";
         return 0;
       }
       else{
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
       //KEY MAP
       file>>tmp_string;
       if(tmp_string != L"KEY"){
-        wcout<<L"ERROR (KEY): Problem z plikiem data/map.bin!\n";
+        wcout<<L"ERROR (KEY): Problem z plikiem data/lematyzator_map!\n";
         return 0;
       }
       else{
@@ -67,7 +67,7 @@ int main(int argc, char* argv[]){
       //FINAL STATE
       file>>tmp_string;
       if(tmp_string != L"FINAL"){
-        wcout<<L"ERROR (FINAL): Problem z plikiem data/map.bin - błedna ilość znaków do pobrania!\n";
+        wcout<<L"ERROR (FINAL): Problem z plikiem data/lematyzator_map - błedna ilość znaków do pobrania!\n";
         return 0;
       }
       else{
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]){
       }
     }
     else{
-      wcout<<L"Problem z plikiem: data/map.bin\n";
+      wcout<<L"Problem z plikiem: data/lematyzator_map\n";
       return 0;
     }
     file.close();
@@ -99,7 +99,7 @@ int main(int argc, char* argv[]){
   }
   {
     ifstream file;
-    file.open("data/data", ios::in);
+    file.open("data/lematyzator_data", ios::in);
     if(file.good()){
       int begin_state, end_state, char_state;
       while(file>>begin_state>>end_state>>char_state){
@@ -107,7 +107,7 @@ int main(int argc, char* argv[]){
       }
     }
     else{
-      wcout<<L"Problem z plikiem: data/data.bin\n";
+      wcout<<L"Problem z plikiem: data/lematyzator_data\n";
       return 0;
     }
     file.close();

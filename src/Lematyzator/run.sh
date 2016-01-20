@@ -26,7 +26,7 @@ if [ $1 ]; then
 	echo "Przetwarzanie do postaci binarnej dla Lematyzatora"
 	g++ -std=c++11 load_into_memory.cpp -o load_into_memory.app
 	./load_into_memor.app
-	g++ -std=c++11 lematyzator.cpp -o lematyzator.app
+	g++ -O3 -std=c++11 lematyzator.cpp -o lematyzator.app
 	echo "Lematyzator zbudowany"
 	rm data/data*
 	rm data/OpenFST*
