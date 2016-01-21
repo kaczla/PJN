@@ -139,41 +139,46 @@ int main(int argc, char* argv[]){
     else {
       next = KeyMap[L'+'];
       start = States[start][next];
-      wstring t;
-      int start2;
-      for(i=0;i<StatesSizeY;++i){
-        if(States[start][i] != -1){
-          t.clear();
-          start2 = States[start][i];
-          t+=KeyMapReversed[i];
-          while(FinalState.find(start2) == FinalState.end()){
-            for(j=0;j<StatesSizeY;++j){
-              if(States[start2][j] != -1){
-                start2 = States[start2][j];
-                t+=KeyMapReversed[j];
+      if(start < 0){
+        wcout<<L"\tBrak słowa w słowniku!\n";
+      }
+      else{
+        wstring t;
+        int start2;
+        for(i=0;i<StatesSizeY;++i){
+          if(States[start][i] != -1){
+            t.clear();
+            start2 = States[start][i];
+            t+=KeyMapReversed[i];
+            while(FinalState.find(start2) == FinalState.end()){
+              for(j=0;j<StatesSizeY;++j){
+                if(States[start2][j] != -1){
+                  start2 = States[start2][j];
+                  t+=KeyMapReversed[j];
+                  break;
+                }
+              }
+              if(j==StatesSizeY){
                 break;
               }
             }
-            if(j==StatesSizeY){
-              break;
+            if(FinalState.find(start2) != FinalState.end()){
+              toAdd.push_back(t);
             }
-          }
-          if(FinalState.find(start2) != FinalState.end()){
-            toAdd.push_back(t);
-          }
-          else{
-            wcout<<L"\tBrak słowa w słowniku!\n";
+            else{
+              wcout<<L"\tBrak słowa w słowniku!\n";
+            }
           }
         }
       }
-    }
-    for(toAddIt = toAdd.begin(); toAddIt != toAdd.end(); ++toAddIt){
-      i = removeChar[(*toAddIt)[0]];
-      output_word.assign(input_word.begin(), input_word.end()-i);
-      output_word.append(toAddIt->begin()+1, toAddIt->end());
-      wcout<<L"\t"<<output_word<<L"\n";
-    }
-    wcout<<L"\n";
+      for(toAddIt = toAdd.begin(); toAddIt != toAdd.end(); ++toAddIt){
+        i = removeChar[(*toAddIt)[0]];
+        output_word.assign(input_word.begin(), input_word.end()-i);
+        output_word.append(toAddIt->begin()+1, toAddIt->end());
+        wcout<<L"\t"<<output_word<<L"\n";
+      }
+      wcout<<L"\n";
+      }
   }
   // for(i=0; i<StatesSizeX; ++i){
   //   delete [] States[i];
