@@ -1,0 +1,67 @@
+Zad1:
+Lematyzator
+
+Stworzyć lematyzator języka polskiego oparty na:
+- słowniku form fleksyjnych http://zil.ipipan.waw.pl/PoliMorf
+- automatach skończenie stanowych, można wykorzystać bibliotekę OpenFst i/lub narzędzia opracowane przez Jana Daciuka: http://galaxy.eti.pg.gda.pl/katedry/kiw/pracownicy/Jan.Daciuk/personal/
+
+Wszystkie formy z PoliMorfa powinny być uwzględnione w automacie. Należy także wypracować schemat postępowania dla niejednoznacznych słów.
+
+
+
+Zad2:
+Odbluzgiwacz
+
+Opracować oparty na wyrażeniach regularnych lub gramatykach Thrax moduł cenzurujący przekleństwa i zwroty wulgarne (na wyjściu słowa powinny "gwiazdkowane"):
+- należy przygotować starannie listę wyjątków (np. "podsłuchuj", "podupadły")
+- obgluzgiwacz powinien być odporny na proste podstawienia ("q" zamiast "ku", "v" zamiast "w")
+- należy uwzględnić także frazy (2 ogólnie cenzuralne słowa stanowiące wulgarną całość, np. "walić k***a")
+- nie gwiazdkować wyrazów, które nie są wulgarne w odpowiednim kontekście ("pieprzyć zupę", "pedał roweru")
+
+
+
+Zad3:
+Porter algorithm for Polish
+
+Implement Porter algorithm for Polish in Python. The application should return:
+- stem
+- applied steps of algorithm
+- information on POS (e.g. noun) if possible
+
+
+
+Zad4:
+QA system. Dates of birth.
+
+Implement a QA system that answers Polish questions about dates of birth and death of famous people.
+
+
+
+Zad5:
+QA WMI
+
+Implement a QA wiki system (based on the idea of wikianswers) on the topic of WMI.
+
+
+
+Zad6:
+Uwspółcześnienie
+
+Napisać moduł oparty na wyrażeniach regularnych bądź (lepiej) gramatykach Thrax, który uwspółcześnia dziewiętnasto- i dwudziestowieczne testy do współczesnych norm ortograficznych (np. "konstytucya" na "konstytucja", "xiążka" na "książka").
+Jako materiał do testowania programu można wykorzystać korpus z zadania "Roku ów".
+
+
+
+Zad7:
+Nos Kupały
+
+Sprawdzić, który z popularnych serwisów (Pudelek, Wp, Onet, Gazeta.pl) ma najwięcej błędów ortograficznych/gramatycznych. Wykorzystać otwartoźródłowe korektory ortograficzne (np. hunspell) i gramatyczne (languagetool).
+
+
+
+Zad8:
+Mój własny tłumacz
+
+Przy użyciu programu Moses wyuczyć program tłumaczący z angielskiego na polski.
+Jako zbioru uczącego użyć korpusu napisów filmowych. http://opus.lingfil.uu.se/OpenSubtitles2013.php
+(Uwaga: zadanie dla studentów nieuczęszczających na zajęcia "Tłumaczenie automatyczne").

@@ -1,0 +1,54 @@
+Zad1:
+Morphological synthesis
+
+Implement a system that generates words that do not occur in standard dictionaries, although they are confirmed in a corpus, for a few natural languages.
+Use PoliMorf a standard dictionary (http://zil.ipipan.waw.pl/PoliMorf) and Wikipedia or CommonCrawl as a corpus.
+
+
+
+Zad2:
+Głupie formy
+
+W każdym języku są formy, które choć teoretycznie istnieją, są mało prawdopodobne i przypadkowo są zbieżne z bardzo prawdopodobnymi formami, np. w języku polskim:
+- "albo" jako wołacz od "alba"
+- "miał" jako rzeczownik (dużo bardziej prawdopodobna interpretacja jako forma czasownika)
+- "bez" jako forma rzeczownika "bez" albo "beza"
+Napisać program, który na podstawie słownika form fleksyjnych (np. PoliMorf - http://zil.ipipan.waw.pl/PoliMorf) i dużego korpusu (Wikipedia albo CommonCrawl) automatycznie wyłowi takie formy (przynajmniej ich część).
+
+
+
+Zad3:
+Statystyki
+
+Pobrać słownik form fleksyjnych PoliMorf (http://zil.ipipan.waw.pl/PoliMorf).
+Opracować ciekawe statystyki i wykresy opisujące ten słownik, np.:
+- rozbicie na części mowy
+- rozbicie wg pierwszych/ostatnich liter
+- statystyki liter
+- najdłuższy wyraz, najdłuższy wyraz jednosylabowy, najdłuższy wyraz w którym żadna litera się nie powtarza itp.
+
+
+
+Zad4:
+Krzyżówka
+
+Napisać, program, który pobiera opis na wejściu schemat pól krzyżówki w prostym formacie tekstowym, a na wyjściu wypisuje propozycję wypełnionej krzyżówki.
+Jako dopuszczalne słowa należy uwzględnić rzeczowniki (tylko w mianowniku liczby pojedynczej, chyba że rzeczownik występuje tylko w liczbie mnogiej - plulare tantum - np. "nożyczki", wtedy dopuszczalny jest mianownik liczby mnogiej) ze słownika PoliMorf (http://zil.ipipan.waw.pl/PoliMorf).
+
+
+
+Zad5:
+SPADE - cardinal numbers
+
+Apply SPADE to transform Polsih cardinals numerals into their "spoken" form, e.g.
+IN: Mam 5 znaczków OUT: Mam pięć znaczków
+IN: Mam 5 kolegów OUT: Mam pięciu kolegów.
+
+
+
+Zad6:
+Person entities recognized by SPADE
+
+Apply SPADE to recognize person entities in Poilsh texts, e.g.
+IN: Kiedy mogę się spotkać z prof. UAM dr. hab. Krzysztofem Jassemem?
+OUT: Kiedy mogę się spotkać z <prof. UAM dr. hab. Krzysztofem Jassemem>?
